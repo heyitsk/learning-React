@@ -12,22 +12,22 @@ function MyApp(){
   )
 }
 
-//since at the end of day the above function MyApp() gets parsed (converted) into the below type of reactElement which is an object with key value pairs by "babble" 
-const reactElement = {
-  type: 'a',
-  props :{
-      href : 'http://google.com',
-      target : '_blank',
+//since at the end of day the above function MyApp() gets parsed (converted) into the below type of tree object reactElement which is an object with key value pairs by "babble" 
+// const reactElement = {
+//   type: 'a',
+//   props :{
+//       href : 'http://google.com',
+//       target : '_blank',
 
-  },
-  children : "click me to visit google"
-} // but this when entered inside render function won't execute bcz we created this for our own customReact and this is not how react accept arguments if you want to create one ->
+//   },
+//   children : "click me to visit google"
+// } // but this when entered inside render function won't execute bcz we created this for our own customReact and this is not how react accept arguments if you want to create one ->
 
-const anotherReactElement = React.createElement(
-  'p',
-  {href:"https://google.com", target:"_blank"},
-  'click me to visit google'
-)
+// const anotherReactElement = React.createElement(
+//   'p',
+//   {href:"https://google.com", target:"_blank"},
+//   'click me to visit google'
+// )
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
